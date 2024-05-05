@@ -1,27 +1,29 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     margin: 0;
     box-sizing: border-box;
     font: inherit;
 }
 
-body{
+body {
     background-image: url('../assets/bgtop.svg');
     background-color: #F5F8FF;
     width: 1440px;
     background-position: top;
     backdrop-filter: blur(30px);
     background-repeat: no-repeat;
-    margin-left: calc((100vw - 1440px) / 2); 
+    margin-left: calc((100vw - 1440px) / 2);
     margin-right: calc((100vw - 1440px) / 2);
 
 }
 
-header{
+header {
     display: flex;
     width: 100%;
 }
 
-logo{
+logo {
     margin-left: 112px;
     margin-top: 31px;
     display: flex;
@@ -29,21 +31,21 @@ logo{
     height: 37.29px;
 }
 
-logo img{
+logo img {
     width: 100%;
 }
 
-logo:hover{
+logo:hover {
     cursor: pointer;
 }
 
-nav{
+nav {
     margin: 16px 189px 0px 189px;
     width: 499px;
     height: 68px;
 }
 
-nav ul{
+nav ul {
     margin: 0;
     padding: 22px 0;
     display: flex;
@@ -56,39 +58,40 @@ nav ul{
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 20px;
 }
-nav .onload a{
+
+nav .onload a {
     font-weight: bold;
     color: rgba(37, 36, 50, 1);
 }
 
-nav a{
+nav a {
     display: inline-block;
     background: none;
     text-decoration: none;
     color: rgba(137, 135, 161, 1);
 }
 
-nav a:hover{
+nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+nav a.home {
     font-weight: bold;
     color: rgba(37, 36, 50, 1);
 }
 
-nav .home:active{
-    font-weight: bold;
-}
-
-.login-container{
+.login-container {
     display: flex;
     height: 48px;
     margin-right: 112px;
     margin-top: 26px;
 }
 
-.login-container input:hover{
+.login-container input:hover {
     cursor: pointer;
 }
 
-.signup{
+.signup {
     width: 132px;
     height: 48px;
     background-color: rgba(78, 71, 255, 1);
@@ -98,10 +101,10 @@ nav .home:active{
     font-size: 16px;
     border: none;
     border-radius: 10px;
-    text-align: center; 
+    text-align: center;
 }
 
-.signin{
+.signin {
     height: 48px;
     border: none;
     background-color: transparent;
@@ -111,24 +114,24 @@ nav .home:active{
     text-align: center;
 }
 
-.intro{
+.intro {
     font-family: "Raleway", sans-serif;
-    width: 100%;
-    height: 570px;
+    margin: 104px 338px 155px 338px;
+    width: max-content;
+    height: max-content;
 }
 
-.txtbtn{
-    margin: 104px 338px;
+.txtbtn {
     width: 764px;
     text-align: center;
 }
 
-.txtbtn h2{
+.txtbtn h2 {
     font-size: 73.34px;
     font-weight: 700;
 }
 
-.txtbtn input{
+.txtbtn input {
     margin: 36px 277px 0px 277px;
     padding: 0;
     width: 211px;
@@ -140,6 +143,111 @@ nav .home:active{
     color: rgba(255, 255, 255, 1);
 }
 
-.txtbtn input:hover{
+.txtbtn input:hover {
     cursor: pointer;
+}
+
+.aboutus {
+    margin: 0 112px;
+    height: 750px;
+}
+
+.aboutus h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.about-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-row-span-2 {
+    grid-row: span 2;
+}
+
+.about-grid .card {
+    height: fit-content;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 0px 20px 0px 26px;
+}
+
+.card .icon{
+    margin-top: 30px;
+    border: 10px solid #F5F8FF;
+    border-radius: 9px;
+    background-color: #F5F8FF;
+}
+
+.card-content{
+    font-family: "Inter", sans-serif;
+}
+
+.card-content h3{
+    font-weight: 600;
+    margin: 18px 0;
+}
+
+.card-content p{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(137, 135, 161, 1);
+    margin-bottom: 30px;
+    line-height: 1.25rem;
+}
+
+.webflow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.webflow-img-box {
+    margin: 19px 0;
+    border-radius: 5px;
+    width: 218px;
+    height: 214px;
+    background-color: rgba(91, 84, 255, 1);
+}
+
+.webflow-img-box img {
+    margin: 77px 63px 77.85px 60px;
+    width: 91px;
+    height: 59.15px;
+}
+
+.ecom .ecom-img{
+    border-radius: 5px;
+    margin: 0px 2px 20px 0px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    body {
+        margin-left: 20px;
+        margin-right: 20px;
+        background-position: top center;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+
+    .login-container {
+        margin-right: auto;
+    }
+
+    .txtbtn input {
+        width: 100%;
+    }
 }
