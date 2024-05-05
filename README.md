@@ -4,5 +4,4 @@ Based on [UI design](https://www.figma.com/file/VzVAaRAzDNfawCIQabtdYK/Light-Web
 
 Website [FasterUI](https://fasterui-rajdeepdey.netlify.app/)
 
-![Landing Page UI]
-(assets\home.png)
+![Landing Page](https://github.com/RajdeepDey010/fasterui-landingpage/blob/main/assets/home.png)
