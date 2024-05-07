@@ -88,12 +88,12 @@ nav a.home {
     margin-top: 26px;
 }
 
-.mobile-nav-icon[name="grid-outline"]{
+.mobile-nav-icon[name="grid-outline"] {
     width: 2rem;
     height: 2rem;
 }
 
-.mobile-nav-icon[name="grid"]{
+.mobile-nav-icon[name="grid"] {
     width: 1.8rem;
     height: 1.8rem;
 }
@@ -136,11 +136,17 @@ nav a.home {
     text-align: center;
 }
 
+
+
+
+
+
 .intro {
     font-family: "Raleway", sans-serif;
     margin: 104px 338px 155px 338px;
     width: max-content;
     height: max-content;
+    container-type: inline-size;
 }
 
 .txtbtn {
@@ -169,6 +175,11 @@ nav a.home {
     cursor: pointer;
 }
 
+
+
+
+
+
 .aboutus {
     margin: 0 112px;
     height: 750px;
@@ -186,6 +197,7 @@ nav a.home {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
+    container-type: inline-size;
 }
 
 .grid-col-span-2 {
@@ -255,48 +267,59 @@ nav a.home {
 
 
 /* 1em = 16px */
-@media (max-width: 62em) {
+@media screen and (max-width: 360px) {
 
-    body{
+    body {
         margin: 0px;
-        width: 62em;
+        width: 360px;
         overflow-x: hidden;
-    }
-
-    .about-grid {
-        display: block;
-        max-width: 100%;
+        backdrop-filter: blur(15px);
+        background-size: 25em 24em;
     }
 
     header {
+        width: 100%;
         position: relative;
         justify-content: space-between;
     }
 
-    .active .navbar{
+    logo {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 170px;
+        height: 37.29px;
+    }
+
+    logo img {
+        margin: 0;
+        width: 40%;
+    }
+
+    .active .navbar {
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
         pointer-events: all;
     }
 
-    .active .mobile-nav .mobile-nav-icon[name="grid"]{
+    .active .mobile-nav .mobile-nav-icon[name="grid"] {
         display: block;
     }
 
-    .active .mobile-nav .mobile-nav-icon[name="grid-outline"]{
+    .active .mobile-nav .mobile-nav-icon[name="grid-outline"] {
         display: none;
     }
 
     nav {
-        margin: 20px 0px;
+        margin: 0px 0px;
         display: flex;
         width: 100%;
         height: 100vh;
         background: #FFFFFF;
         position: absolute;
         top: 0;
-        left: 0;    
+        left: 0;
+        z-index: 998;
 
         justify-content: center;
         align-items: center;
@@ -320,9 +343,79 @@ nav a.home {
     .mobile-nav {
         display: block;
         z-index: 999;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    .mobile-nav-icon {
+        width: 0.2em;
     }
 
     .intro {
-        margin: 104px 102px 155px 102px;
+        margin: 0px;
+        margin: 52px 10px;
+    }
+
+    .txtbtn {
+        width: 360px;
+        text-align: center;
+    }
+
+    .txtbtn h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .txtbtn input {
+        margin: 18px 0px 0px 0px;
+        padding: 0;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .aboutus {
+        margin: 0 20px;
+        height: 750px;
+    }
+
+    .aboutus h2 {
+        font-family: "Raleway", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+
+    .about-grid .card {
+        padding: 0px 10px 0px 13px;
+    }
+
+    .card .icon {
+        margin-top: 15px;
+        width: 8px;
+        height: 8px;
+        border: none;
+        border-radius: 0px;
+        background: transparent;
+    }
+
+    .card-content h3 {
+        font-weight: 600;
+        font-size: 0.6rem;
+        margin: 6px 0;
+    }
+
+    .card-content p {
+        font-weight: 400;
+        font-size: 0.4rem;
+        color: rgba(137, 135, 161, 1);
+        margin-bottom: 15px;
+        line-height: 0.6rem;
     }
 }
