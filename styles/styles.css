@@ -267,7 +267,7 @@ nav a.home {
 
 
 /* 1em = 16px */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
 
     body {
         margin: 0px;
@@ -417,5 +417,14 @@ nav a.home {
         color: rgba(137, 135, 161, 1);
         margin-bottom: 15px;
         line-height: 0.6rem;
+    }
+
+    .webflow{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-col-span-2{
+        grid-column: span 1;
     }
 }
